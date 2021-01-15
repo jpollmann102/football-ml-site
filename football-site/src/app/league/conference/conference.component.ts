@@ -13,6 +13,7 @@ export class ConferenceComponent implements OnInit {
   public teamsInfo:object[] = [];
   public season:number = 2002;
   public loading:boolean = true;
+  public seasons:number[] = [2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019]
   public numberColumns:string[] = [
     'home_pass_yards_per_attempt','home_rush_yards_per_attempt','home_turnovers_per_game','home_sacks_per_game','home_fumbles_per_game','home_int_per_game','home_forced_int_per_game','home_forced_fumbles_per_game','home_forced_turnovers_per_game'
   ];
@@ -47,6 +48,7 @@ export class ConferenceComponent implements OnInit {
 
   async setupTeamStats() {
     this.loading = true;
+    this.teamsInfo = [];
     for(let i = 0; i < this.teams.length; i++)
     {
       const thisTeamInfo = await this.teamsService.getSeasonStatsForTeam(this.teams[i], this.season).toPromise();
@@ -57,6 +59,11 @@ export class ConferenceComponent implements OnInit {
 
   goToTeam(event) {
     this.router.navigate(['/League/Team', event[0].home])
+  }
+
+  changeSeason(event) {
+    this.season = event.target.value;
+    this.setupTeamStats();
   }
 
 }
