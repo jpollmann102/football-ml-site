@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center">
+  <img src="./assets/nfl.png">
+</div>
+<div *ngIf="nfc.length > 0">
+  <app-conference conference="NFC"></app-conference>
+</div>
+<div *ngIf="afc.length > 0">
+  <app-conference conference="AFC"></app-conference>
+</div>

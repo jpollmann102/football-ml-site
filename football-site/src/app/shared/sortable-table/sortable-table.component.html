@@ -1,0 +1,27 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th *ngFor="let col of columns">
+        <span (click)="colClick(col.name)">
+          {{ col.name }}
+          <span *ngIf="col.sorted" [class]="getColumnSorted(col.name)"></span>
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody *ngIf="!loading">
+    <tr *ngFor="let row of rowsToShow; let i = index;">
+      <td *ngFor="let col of colNames" (click)="handleRowClicked(row, i)">
+        <span *ngIf="dateFields.includes(dataMap[col])">
+          {{ row[dataMap[col]] | date:'MM/dd/yyy' }}
+        </span>
+        <span *ngIf="numFields.includes(dataMap[col])">
+          {{ row[dataMap[col]] | number:'1.1-1':'en-US' }}
+        </span>
+        <span *ngIf="!numFields.includes(dataMap[col]) && !dateFields.includes(dataMap[col])">
+          {{ row[dataMap[col]] }}
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
