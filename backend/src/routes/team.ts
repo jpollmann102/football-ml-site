@@ -5,7 +5,7 @@ const baseExtension = '/team';
 
 export class TeamsAPI {
 
-  async getSeasonStatsForTeam(req: restify.Request, res: restify.Response, next: any) {
+  async getHomeStatsForTeam(req: restify.Request, res: restify.Response, next: any) {
     const team = req.params.team;
     const season = req.params.season;
     const dbConn = await connectToDb();
@@ -22,7 +22,25 @@ export class TeamsAPI {
                 });
   }
 
+  async getAwayStatsForTeam(req: restify.Request, res: restify.Response, next: any) {
+    const team = req.params.team;
+    const season = req.params.season;
+    const dbConn = await connectToDb();
+    await dbConn.get({ away: team, season: season })
+                .then((response:any) => {
+                  res.contentType = 'json';
+                  res.send(response);
+                })
+                .catch((error:any) => {
+                  console.error(error);
+                })
+                .finally(() => {
+                  next();
+                });
+  }
+
   initialize(server:restify.Server) {
-    server.get(`${baseExtension}/:team/seasonStats/:season`, this.getSeasonStatsForTeam);
+    server.get(`${baseExtension}/:team/homeSeasonStats/:season`, this.getHomeStatsForTeam);
+    server.get(`${baseExtension}/:team/awaySeasonStats/:season`, this.getAwayStatsForTeam);
   }
 }

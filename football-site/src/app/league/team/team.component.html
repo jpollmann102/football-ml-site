@@ -1,1 +1,52 @@
-<p>team works!</p>
+<div class="row">
+  <div class="col-4">
+    <img id="teamLogo" [src]="teamsService.getTeamImage(team)">
+  </div>
+  <div class="col-8">
+    <div class="row" style="padding-top:155px">
+      <div class="col-12">
+        <p style="font-size:50px; margin-bottom:-45px">{{ teamsService.teamLocation[team] }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p style="font-size:100px"><strong>{{ team }}</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <form>
+      <div class="form-group">
+        <label for="seasonSelectControl">Season</label>
+        <select class="form-control" id="seasonSelectControl" (change)="changeSeason($event)">
+          <option *ngFor="let season of seasons">{{ season }}</option>
+        </select>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="d-flex justify-content-center">
+  <div *ngIf="loading" class="spinner-border text-primary" role="status">
+    <span class="sr-only"></span>
+  </div>
+</div>
+<div *ngIf="!loading">
+  <p style="font-size:25px"><strong>Season Record:</strong> {{ teamWins }} - {{ teamLosses }} - {{ teamTies }}</p>
+  <app-sortable-table
+    [rows]="teamInfo"
+    [numFields]="seasonStatsNumberColumns"
+    [dataMap]="seasonStatsDataMap"
+  ></app-sortable-table>
+  <p style="font-size:60px"><strong>Game Offense Stats</strong></p>
+  <app-sortable-table
+    [rows]="gamesInfo"
+    [dataMap]="gamesOStatsDataMap"
+  ></app-sortable-table>
+  <p style="font-size:60px"><strong>Game Defense Stats</strong></p>
+  <app-sortable-table
+    [rows]="gamesInfo"
+    [dataMap]="gamesDStatsDataMap"
+  ></app-sortable-table>
+</div>
