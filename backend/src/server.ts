@@ -20,6 +20,9 @@ server.use(restify.plugins.acceptParser( server.acceptable ));
 let teams = new api.TeamsAPI();
 teams.initialize(server);
 
+let scores = new api.ScoresAPI();
+scores.initialize(server);
+
 server.listen(8626, () => {
   console.log('%s listening at %s', server.name, server.url);
 });

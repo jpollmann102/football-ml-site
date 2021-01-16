@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ModelsComponent } from './models/models.component';
 import { ConferenceComponent } from './league/conference/conference.component';
 import { SortableTableComponent } from './shared/sortable-table/sortable-table.component';
+import { ScoresComponent } from './main-view/scores/scores.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SortableTableComponent } from './shared/sortable-table/sortable-table.c
     ModelsComponent,
     ConferenceComponent,
     SortableTableComponent,
+    ScoresComponent,
   ],
   imports: [
     BrowserModule,
