@@ -13,6 +13,7 @@ import { ModelsComponent } from './models/models.component';
 import { ConferenceComponent } from './league/conference/conference.component';
 import { SortableTableComponent } from './shared/sortable-table/sortable-table.component';
 import { ScoresComponent } from './main-view/scores/scores.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ScoresComponent } from './main-view/scores/scores.component';
     ConferenceComponent,
     SortableTableComponent,
     ScoresComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
