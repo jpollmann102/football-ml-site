@@ -1,1 +1,42 @@
-<p>models works!</p>
+<div class="row">
+  <div class="col-6">
+    <h1>Machine Learning Models</h1>
+    <p> First and foremost, the models below are all results of my working through <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">this book</a> by Aurélien Géron. A lot of these models are not that great and are all a work in progress, especially the pregame models. The games below are from the 2020-2021 Divisional Round Playoffs.</p>
+    <a class="btn btn-primary btn-lg" routerLink="/Data" role="button">Information on training/test data here</a>
+  </div>
+  <div class="col-6">
+    <div class="row">
+      <h2>Optimized</h2>
+      <p>The optimized column indicates whether or not the model was optimized in any way, whether it be through a grid search, randomized grid search, dropping of uninmportant features, etc. In the future I plan on detailing each specific model with the params and steps taken to produce the model.</p>
+    </div>
+    <div class="row">
+      <h2>Pregame Prediction</h2>
+      <p>This column indicates whether the predictions are made using solely season stats, rather than stats for the predicted game after the fact. These predictions are usually much worse than post game predictions, which is to be expected.</p>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="d-flex justify-content-center">
+  <div *ngIf="loading" class="spinner-border text-primary" role="status">
+    <span class="sr-only"></span>
+  </div>
+</div>
+<div *ngIf="!loading">
+  <div class="row">
+    <div class="col-4">
+      <form>
+        <div class="form-group">
+          <label for="seasonSelectControl">Model</label>
+          <select class="form-control" id="seasonSelectControl" (change)="changeModel($event)">
+            <option *ngFor="let model of models">{{ model }}</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+  <app-sortable-table
+    [rows]="rowsToShow"
+    [dataMap]="dataMap"
+    (onRowClick)="goToModel($event)"
+  ></app-sortable-table>
+</div>
