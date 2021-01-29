@@ -50,7 +50,7 @@ export class TeamsService {
     this.teamLeague['AFC'] = this.teamNames.filter(x => !this.teamLeague['NFC'].includes(x));
   }
 
-  getTeamImage(teamName:string) {
+  getTeamImage(teamName:string):string {
     return 'assets/'+teamName.toLowerCase()+'.png';
   }
 

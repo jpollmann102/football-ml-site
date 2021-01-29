@@ -14,6 +14,7 @@ import { ConferenceComponent } from './league/conference/conference.component';
 import { SortableTableComponent } from './shared/sortable-table/sortable-table.component';
 import { ScoresComponent } from './main-view/scores/scores.component';
 import { FooterComponent } from './footer/footer.component';
+import { DataComponent } from './data/data.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     SortableTableComponent,
     ScoresComponent,
     FooterComponent,
+    DataComponent,
   ],
   imports: [
     BrowserModule,

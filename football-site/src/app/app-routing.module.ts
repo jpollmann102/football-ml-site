@@ -5,9 +5,12 @@ import { LeagueComponent } from './league/league.component';
 import { MainViewComponent } from './main-view/main-view.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ModelsComponent } from './models/models.component';
+import { DataComponent } from './data/data.component';
 
 const routes: Routes = [
   { path: 'Models', component: ModelsComponent },
+  { path: 'Models/:model', component: ModelsComponent },
+  { path: 'Data', component: DataComponent },
   { path: 'League/Team/:team', component: TeamComponent, },
   { path: 'League/:league', component: LeagueComponent },
   { path: '', component: MainViewComponent },
