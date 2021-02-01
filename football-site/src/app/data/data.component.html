@@ -1,2 +1,15 @@
-<p>data works!</p>
-yuxbni76
+<p>Data found with thanks to Reddit user /u/yuxbni76, from <a href="https://www.reddit.com/r/datasets/comments/djucb6/nfl_game_stats_scraped_from_espn/">this post</a></p>
+
+<h2>Feature Correlations</h2>
+<p>Below are the feature correlation values for both the home score and away score labels. Features closer to 1.0 are higher positive correlation, while features closer to -1.0 have higher negative correlation. Values around 0 tend to have little to no correlation. Exploring feature correlations is a great way to drop features for your models in an attempt to improve accuracy.</p>
+
+<p>A clarification on the naming of some features. Features with <strong>forced</strong> are defensive stats, meaning that <strong>home_forced_int_per_game</strong> indicates the number of interceptions the home team's defense get per game. On the flip side, <strong>home_int_per_game</strong> indicates the home team's thrown intereceptions per game.</p>
+
+<div class="row">
+  <div class="col-6 d-flex justify-content-center">
+    <img src="assets/homeScoreCorr.PNG"/>
+  </div>
+  <div class="col-6 d-flex justify-content-center">
+    <img src="assets/awayScoreCorr.PNG"/>
+  </div>
+</div>
