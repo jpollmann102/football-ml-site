@@ -1,0 +1,5 @@
+id,model,optimized,pregame,feature_drop
+1,Random Forest Regressor,FALSE,TRUE,FALSE
+2,Random Forest Regressor,TRUE,FALSE,FALSE
+3,Random Forest Regressor,FALSE,FALSE,FALSE
+4,Random Forest Regressor,TRUE,TRUE,FALSE

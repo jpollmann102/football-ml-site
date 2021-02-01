@@ -1,21 +1,21 @@
-model,optimized,pregame,home,away,home_score,away_score,p_home_score,p_away_score,p_error_home,p_error_away
-Random Forest Regressor,FALSE,TRUE,Saints,Buccaneers,20,30,27,22,35.0,26.7
-Random Forest Regressor,FALSE,TRUE,Packers,Rams,32,18,27,20,15.6,11.1
-Random Forest Regressor,FALSE,TRUE,Bills,Ravens,17,3,25,27,47.1,800.0
-Random Forest Regressor,FALSE,TRUE,Chiefs,Browns,22,17,28,21,27.3,23.5
-Random Forest Regressor,TRUE,FALSE,Saints,Buccaneers,20,30,15,22,25.0,26.7
-Random Forest Regressor,TRUE,FALSE,Packers,Rams,32,18,33,13,3.1,27.8
-Random Forest Regressor,TRUE,FALSE,Bills,Ravens,17,3,20,24,17.6,700.0
-Random Forest Regressor,TRUE,FALSE,Chiefs,Browns,22,17,31,20,40.9,17.6
-Random Forest Regressor,FALSE,FALSE,Saints,Buccaneers,20,30,15,23,25.0,23.3
-Random Forest Regressor,FALSE,FALSE,Packers,Rams,32,18,35,12,9.4,33.3
-Random Forest Regressor,FALSE,FALSE,Bills,Ravens,17,3,23,23,35.3,666.7
-Random Forest Regressor,FALSE,FALSE,Chiefs,Browns,22,17,31,18,40.9,5.9
-Random Forest Regressor,TRUE,TRUE,Saints,Buccaneers,20,30,28,23,40.0,23.3
-Random Forest Regressor,TRUE,TRUE,Packers,Rams,32,18,29,24,9.4,33.3
-Random Forest Regressor,TRUE,TRUE,Bills,Ravens,17,3,21,21,23.5,600.0
-Random Forest Regressor,TRUE,TRUE,Chiefs,Browns,22,17,25,22,13.6,29.4
-Stochastic Gradient Descent Linear Regressor,FALSE,TRUE,Saints,Buccaneers,20,30,35,34,75.0,13.3
-Stochastic Gradient Descent Linear Regressor,FALSE,TRUE,Packers,Rams,32,18,32,27,0.0,50.0
-Stochastic Gradient Descent Linear Regressor,FALSE,TRUE,Bills,Ravens,17,3,34,31,100.0,933.3
-Stochastic Gradient Descent Linear Regressor,FALSE,TRUE,Chiefs,Browns,22,17,32,20,45.5,17.6
+model_id,model,optimized,pregame,home,away,home_score,away_score,p_home_score,p_away_score,p_error_home,p_error_away
+1,Random Forest Regressor,FALSE,TRUE,Saints,Buccaneers,20,30,27,22,35,26.7
+1,Random Forest Regressor,FALSE,TRUE,Packers,Rams,32,18,27,20,15.6,11.1
+1,Random Forest Regressor,FALSE,TRUE,Bills,Ravens,17,3,25,27,47.1,800
+1,Random Forest Regressor,FALSE,TRUE,Chiefs,Browns,22,17,28,21,27.3,23.5
+2,Random Forest Regressor,TRUE,FALSE,Saints,Buccaneers,20,30,15,22,25,26.7
+2,Random Forest Regressor,TRUE,FALSE,Packers,Rams,32,18,33,13,3.1,27.8
+2,Random Forest Regressor,TRUE,FALSE,Bills,Ravens,17,3,20,24,17.6,700
+2,Random Forest Regressor,TRUE,FALSE,Chiefs,Browns,22,17,31,20,40.9,17.6
+3,Random Forest Regressor,FALSE,FALSE,Saints,Buccaneers,20,30,15,23,25,23.3
+3,Random Forest Regressor,FALSE,FALSE,Packers,Rams,32,18,35,12,9.4,33.3
+3,Random Forest Regressor,FALSE,FALSE,Bills,Ravens,17,3,23,23,35.3,666.7
+3,Random Forest Regressor,FALSE,FALSE,Chiefs,Browns,22,17,31,18,40.9,5.9
+4,Random Forest Regressor,TRUE,TRUE,Saints,Buccaneers,20,30,28,23,40,23.3
+4,Random Forest Regressor,TRUE,TRUE,Packers,Rams,32,18,29,24,9.4,33.3
+4,Random Forest Regressor,TRUE,TRUE,Bills,Ravens,17,3,21,21,23.5,600
+4,Random Forest Regressor,TRUE,TRUE,Chiefs,Browns,22,17,25,22,13.6,29.4
+1,Stochastic Gradient Descent Linear Regressor,FALSE,TRUE,Saints,Buccaneers,20,30,35,34,75,13.3
+1,Stochastic Gradient Descent Linear Regressor,FALSE,TRUE,Packers,Rams,32,18,32,27,0,50
+1,Stochastic Gradient Descent Linear Regressor,FALSE,TRUE,Bills,Ravens,17,3,34,31,100,933.3
+1,Stochastic Gradient Descent Linear Regressor,FALSE,TRUE,Chiefs,Browns,22,17,32,20,45.5,17.6
